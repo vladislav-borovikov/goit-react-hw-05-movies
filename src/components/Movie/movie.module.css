@@ -1,0 +1,9 @@
+.movieSection {
+    padding: 20px;
+    display: flex;
+}
+
+.infoBlock {
+    margin-left: 100px;
+}
+
