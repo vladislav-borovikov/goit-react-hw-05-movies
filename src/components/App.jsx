@@ -1,11 +1,10 @@
 import { lazy, Suspense} from "react";
-import { Route, Switch } from "react-router-dom";
-// import HomePage from "./views/HomePage";
+import { Redirect, Route, Switch } from "react-router-dom";
+import HomePage from "./views/HomePage";
 // import MoviesPage from "./views/MoviesPage";
 // import MovieDetailsPage from "./views/MovieDetailsPage"
 import Navigation from "./navigation/Navigation";
 
-const HomePage = lazy(()=> import('./views/HomePage.jsx'))
 const MoviesPage = lazy(()=> import('./views/MoviesPage.jsx'))
 const MovieDetailsPage = lazy(()=> import('./views/MovieDetailsPage.jsx'))
 
@@ -28,6 +27,10 @@ export const App = () => {
 
     <Route path="/movies/:movieId"  >
         <MovieDetailsPage/>
+    </Route>
+
+    <Route>
+        <Redirect to="/"/>
     </Route>
 
     </Switch>

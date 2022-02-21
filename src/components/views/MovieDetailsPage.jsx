@@ -11,7 +11,7 @@ const history = useHistory();
 const match = useRouteMatch()
     
 const Back = () => {
-
+console.log("click", location)
     history.push(location?.state?.from ?? '/'); 
   };
 
