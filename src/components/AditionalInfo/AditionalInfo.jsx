@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { NavLink , Route, useRouteMatch, useLocation} from "react-router-dom";
+import { NavLink , Route, useRouteMatch} from "react-router-dom";
 import Cast from "../../components/Cast/Cast";
 import Reviews from "../../components/Reviews/Reviews.jsx"
 
@@ -8,7 +8,6 @@ const AditionalInfo = ({match}) => {
 
     const {url} = useRouteMatch()
     const { path} = match
-    const location = useLocation
     const {movieId} = useParams()
 
 
